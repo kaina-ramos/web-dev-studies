@@ -1,22 +1,29 @@
-function registraPessoa (nome, sobrenome, peso, altura) {
-    let pessoa = {
-        nome,
-        sobrenome,
-        peso,
-        altura
+function meuEscopo () {
+    const form = document.querySelector('.main_form');
+    const cadastros = [];
+    const logRegistros = document.querySelector('#register_log');
+
+    //O objeto poderia ser passado diretamente no push, a função aqui por organização
+    function cadastraPessoa (nome, sobrenome, peso, altura) {
+        return { nome, sobrenome, peso, altura };
     }
-    return pessoa;
+
+    function recebeEventoForm (evento) {
+        evento.preventDefault(); //Impede a página de atualizar por padrão
+
+        const nome = form.querySelector('#name');
+        const sobrenome = form.querySelector('#last_name');
+        const peso = form.querySelector('#weight');
+        const altura = form.querySelector('#height');
+
+        cadastros.push(cadastraPessoa(nome.value, sobrenome.value, peso.value, altura.value));
+
+        console.log(cadastros[cadastros.length - 1]);
+        console.log(cadastros.length);
+
+        logRegistros.innerHTML += `<p> ${nome.value} ${sobrenome.value} ${peso.value} ${altura.value} </p>`;
+    }
+
+    form.addEventListener('submit', recebeEventoForm);
 }
-
-let registros = [];
-
-const nome = document.getElementById('name');
-console.log(nome)
-const sobrenome = document.getElementById('last_name');
-const peso = document.getElementById('weight');
-const altura = document.getElementById('height');
-
-registros.push(registraPessoa(nome, sobrenome, peso, altura));
-
-console.log(registros);
-console.log(registros.length);
+meuEscopo();
