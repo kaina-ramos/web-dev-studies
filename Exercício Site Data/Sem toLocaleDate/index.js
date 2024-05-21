@@ -75,15 +75,19 @@ function getMonthText (month) {
     return monthText;
 }
 
+function leftZero (value) {
+    return value >= 10 ? value : `0${value}`;
+}
+
 function dateFormat (weekDay, day, month, year, hour, minutes) {
-    return `${weekDay}, ${day} ${month} ${year} ${hour}:${minutes}`;
+    return `${getDayText(weekDay)}, ${leftZero(day)} ${getMonthText(month)} ${year} ${leftZero(hour)}:${leftZero(minutes)}`;
 }
 
 const dateVal = new Date();
 
 //Converte valores em textos
-const dayText = getDayText(dateVal.getDay());
-const monthText = getMonthText(dateVal.getMonth());
+// const dayText = getDayText(dateVal.getDay());
+// const monthText = getMonthText(dateVal.getMonth());
 
 //Cria o texto dentro do container da data
 const divP = document.querySelector('#contain-date-text');
@@ -92,8 +96,8 @@ paragraph.classList.add('date');
 divP.appendChild(paragraph);
 
 
-paragraph.innerHTML = dateFormat(dayText, dateVal.getDate(),
-monthText, dateVal.getFullYear(), dateVal.getHours(), dateVal.getMinutes());
+paragraph.innerHTML = dateFormat(dateVal.getDay(), dateVal.getDate(),
+dateVal.getMonth(), dateVal.getFullYear(), dateVal.getHours(), dateVal.getMinutes());
 
 
 

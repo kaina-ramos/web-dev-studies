@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --primary: #990033;
+    --secondary: #ffefcc;
+    --secondary-lighter: #fff7e6;
+    --primary-darker: #660022;
+}
+
+body{
+    background-image: linear-gradient(to right, var(--primary) 40%, var(--primary-darker));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Poppins';
+}
+
+section {
+    /* background-color: rgba(255, 239, 204, 0.76); */
+    background-image: linear-gradient(to right, #ffecc6 -10%, #ffecb968);
+    margin: 350px auto;
+    width: 40em;
+    padding: 25px;
+    padding-right: 40px;
+    border-radius: 10px;
+}
+
+h2#date-title {
+    font-weight: 800;
+    font-size: 30px;
+    width: fit-content;
+    margin: 0 auto;
+    color: var(--primary);
+}
+
+h2.date {
+    color: var(--primary-darker);
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: normal;
+    font-size: 26px;
+}

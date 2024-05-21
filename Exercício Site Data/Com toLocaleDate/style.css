@@ -8,14 +8,15 @@
 }
 
 body{
-    background-image: linear-gradient(to right, var(--primary), var(--primary-darker));
+    background-image: linear-gradient(to right, var(--primary) 40%, var(--primary-darker));
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Poppins';
 }
 
 section {
-    background-color: rgba(255, 239, 204, 0.76);
+    /* background-color: rgba(255, 239, 204, 0.76); */
+    background-image: linear-gradient(to right, #ffecc6 -10%, #ffecb968);
     margin: 350px auto;
     width: 40em;
     padding: 25px;
