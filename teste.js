@@ -7,4 +7,4 @@ for (let i = 0; tamanhoPal < 2010; i++) {
     tamanhoPal = totalString.length;
 }
 
-console.log(totalString.length);
+console.log(totalString.charAt(2010));
