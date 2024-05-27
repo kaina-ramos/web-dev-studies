@@ -1,37 +1,26 @@
 //Mostra o dia da semana atual da execução
 const data = new Date();
-const diaSemana = data.getDay();
-const diaSemanaText = getDiaSemanaText(diaSemana);
+const diaSemanaText = getDiaSemanaText(data.getDay());
 
 function getDiaSemanaText (diaSemana) {
-    let diaSemanaTexto;
     switch (diaSemana) {
         case 0:
-            diaSemanaTexto = 'Domingo';
-            break;
+            return 'Domingo';
         case 1:
-            diaSemanaTexto = 'Segunda';
-            break;
+            return 'Segunda';
         case 2:
-            diaSemanaTexto = 'Terça';
-            break;
+            return 'Terça';
         case 3:
-            diaSemanaTexto = 'Quarta';
-            break;
+            return 'Quarta';
         case 4:
-            diaSemanaTexto = 'Quinta';
-            break;
+            return 'Quinta';
         case 5:
-            diaSemanaTexto = 'Sexta';
-            break;
+            return 'Sexta';
         case 6:
-            diaSemanaTexto = 'Sábado';
-            break; //Dentro de uma function, o break pode ser substituído por um return
+            return 'Sábado';
         default:
-            diaSemanaTexto = 'Valor Inválido';
-            break;
+            return 'Valor Inválido';
     }    
 }
 
-
-console.log(diaSemana, diaSemanaTexto);
+data.getDate() >= 10 ? console.log(`${data.getDate()}, ${diaSemanaText}`) : console.log(`0${data.getDate()}, ${diaSemanaText}`);
