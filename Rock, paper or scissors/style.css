@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+    color: #DAF5FF;
+}
+
+body {
+    background-image: linear-gradient(to top, #FFBFA0 50%, #44FFD2 50%);
+    background-attachment: fixed;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    width: 30rem;
+    scale: 1.2;
+    margin: 30vh auto;
+    border-radius: 50px;
+    border-style: outset;
+    border-color: #DAF5FF;
+    border-width: 10px;
+    background-image: linear-gradient(to top, #616163, #807f7f);
+    background-color: #616161;
+}
+
+#your-choice, #pc-choice {
+    text-transform: capitalize;
+}
+
+#container-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 3.5em;
+    margin-top: 20px;
+}
+
+button {
+    scale: 1.2;
+    width: 5vw;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 50px;
+    border-style: outset;
+    border-width: 4px;
+    border-color: #DAF5FF;
+    background-color: #858585;
+    cursor: pointer;
+    
+}
+
+button:active {
+    border-color: #eef9fd;
+    color: #94e2ff;
+    background-color: #63696b;
+    scale: 1.17;
+    transition: scale 100ms;
+}
+
+[id$='choice'] {
+    color: #87F6FF;
+}
+
+.win {
+    color: #44FFD2;
+}
+
+.lose {
+    color: #FFBFA0;
+}
+
+.draw {
+    color: #DACCAA;
+}
