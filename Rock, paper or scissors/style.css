@@ -24,6 +24,7 @@ main {
     border-width: 10px;
     background-image: linear-gradient(to top, #616163, #807f7f);
     background-color: #616161;
+    box-shadow: 0 0 30px 5px #0000002a;
 }
 
 #your-choice, #pc-choice {
@@ -48,15 +49,18 @@ button {
     border-color: #DAF5FF;
     background-color: #858585;
     cursor: pointer;
-    
+    box-shadow: 0 0 5px 5px #2b2b2b2a;
 }
 
 button:active {
+    scale: 1.13;
+    color: #87F6FF;
     border-color: #eef9fd;
-    color: #94e2ff;
-    background-color: #63696b;
-    scale: 1.17;
-    transition: scale 100ms;
+    background-color: #eef9fd;
+    border-style: solid;
+    transition: box-shadow 100ms;
+    transition: border-style 200ms;
+    box-shadow: 0 0 20px 5px #f0fcff46;
 }
 
 [id$='choice'] {
