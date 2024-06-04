@@ -21,69 +21,13 @@ section {
     border-radius: 10px;
 }
 
-h2 {
-    font-weight: 800;
-    font-size: 30px;
-    margin: 0 0 15px auto;
-    color: var(--primary);
+.title {
+    color: var(--primary-darker);
 }
 
 p {
+    text-transform: capitalize;
     text-align: justify;
-}
-
-div#text {
-    margin-bottom: 20px;
-}
-
-div#button {
-    margin: 30px auto auto 5px;
-    width: 100%;
-}
-
-button {
-    border: none;
-    border-radius: 10px;
-    background-color: var(--primary);
-    color: white;
-    font-size: 15px;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    height: 40px;
-    width: 100%;
-    font-family: 'Poppins';
-}
-
-button:hover {
-    background-color: var(--primary-darker);
-    cursor: pointer;
-}
-
-input {
-    width: 99%;
-    height: 25px;
-    margin-bottom: 10px;
-    border: 2px solid var(--secondary);
-    transition: 0.2s;
-    border-radius: 6px;
-    outline: none;
-    background-color: white;
-    font-size: medium;
-    font-family: 'Poppins';
-    padding: 5px 10px;
-}
-
-input[type=text]:focus {
-    border: 2px solid #990033;
-}
-
-label {
-    margin-left: 5px;
-    margin-bottom: 3px;
-    font-weight: bold;
-    color: var(--primary);
-}
-
-input, label {
-    display: block;
+    border-radius: 5px;
+    padding: 5px;
 }
