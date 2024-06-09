@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    dialog {
+        color: antiquewhite;
+        background-image: linear-gradient(to top, rgb(255, 225, 0), violet);
+        border-radius: 10px;
+        border-width: 4px;
+        border-color: white;
+        border-style: ridge;
+    }
+    body {
+        background-image: linear-gradient(to bottom right, blueviolet, crimson);
+        border-image: fill;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: white;
+    }
+    button {
+        background-image: linear-gradient(to top, rgb(255, 225, 0), violet);
+        scale: 1.5;
+        margin: 0 20px;
+        border-radius: 10px;
+        border-color: white;
+        border-style: ridge;
+    }
+</style>
+<body>
+    <h1>The dialog object</h1>
+    <h2>Using the showModal() method</h2>
+    <p>Try it!</p>
+    <br>
+    <button id="myBttn" onclick="showDialog()">Show dialog</button>
+    <dialog>Press "ESC" to close</dialog>
+
+    <script>
+        function showDialog (){
+            document.querySelector('dialog').showModal();
+        }        
+    </script>
+</body>
+</html>
