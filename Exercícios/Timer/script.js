@@ -1,28 +1,37 @@
-let data = new Date();
+const relogio = document.querySelector('#timer');
+const iniciar = document.querySelector('#start');
+const pausar = document.querySelector('#pause');
+const reiniciar = document.querySelector('#reset');
 
+let tempoRelogio = 0;
+let timer;
 
-// const exibeTempo = setInterval(function () {
-//     return data.toLocaleTimeString('pt-BR', {
-//         hour12: false
-//     });
-// }, 1000);
+function formataSegundos(segundos){
+    const data = new Date(segundos * 1000); // Converte o valor recebido em mílisegundos
+    return data.toLocaleTimeString('pt-BR', {
+        hour12: false,
+        timeZone: 'GMT' // ou UTC (Ponto de referência / HORA ZERO)
+    });
+}
 
-const timer = document.querySelector('#timer');
-timer.innerHTML = '00:00:00';
+function iniciaRelogio(){
+    timer = setInterval(function() {
+        tempoRelogio++;
+        relogio.innerHTML = formataSegundos(tempoRelogio);
+    }, 1000)
+}
 
-const iniciaBttn = document.querySelector('#start');
-const paraBttn = document.querySelector('#pause');
-const zeraBttn = document.querySelector('#reset');
+iniciar.addEventListener('click', function(event) {
+    clearInterval(timer);
+    iniciaRelogio();
+});
 
-iniciaBttn.addEventListener("click", function() {
-    timer.innerHTML = setInterval(function () {
-        return data.toLocaleTimeString('pt-BR', {});
-    }, 1000);
-})
+pausar.addEventListener('click', function(event) {
+    clearInterval(timer);
+});
 
-paraBttn.addEventListener("active", function() {
-    clearInterval(exibeTempo);
-})
-
-
-
+reiniciar.addEventListener('click', function(event) {
+    clearInterval(timer);
+    relogio.innerHTML = "00:00:00";
+    tempoRelogio = 0;
+});
