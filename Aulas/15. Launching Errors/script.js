@@ -13,7 +13,7 @@
 
 function retornaHora (data) {
     if (data && !(data instanceof Date)) {
-        throw new TypeError('Esperando instância de Date.');
+        throw new TypeError('O dado informado não é do tipo Date.');
     }
 
     if (!data) { // Se nenhum parâmetro for enviado, inicializa automaticamente uma data
@@ -29,10 +29,21 @@ function retornaHora (data) {
 }
 
 try {
-    const data = new Date();
-    console.log(retornaHora());
+    const umaData = new Date();
+    console.log(retornaHora(umaData));
 } catch (error) {
     console.log(error);
+    console.log('Ocorreu um erro, verifique sua inserção.');
 } finally {
-    console.log('Tenha um bom dia!');
+    console.log('*** Execução sem erro ***');
+}
+
+try {
+    const umaString = 'Abóbora';
+    console.log(retornaHora(umaString));
+} catch (error) {
+    console.log(error); //Para exibir o LOG do erro ao user
+    console.log('Ocorreu um erro, verifique sua inserção.');
+} finally {
+    console.log('*** Execução com erro ***');
 }
