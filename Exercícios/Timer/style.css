@@ -14,11 +14,15 @@ body{
 
 section {
     background-color: var(--secondary);
-    margin: 10em auto;
-    width: 40em;
+    margin: 20em auto;
+    width: fit-content;
     padding: 25px;
-    padding-right: 40px;
     border-radius: 10px;
+    box-shadow: 5px 8px 8px 3px #470018;
+}
+
+.paused {
+    color: #be003f;
 }
 
 h2#title {
@@ -26,10 +30,6 @@ h2#title {
     font-size: 30px;
     margin: 0 0 15px auto;
     color: var(--primary);
-}
-
-div#text {
-    margin-bottom: 20px;
 }
 
 div#button {
@@ -50,6 +50,5 @@ button {
 
 button:hover {
     background-color: var(--primary-darker);
-    color: rgb(228, 228, 228);
     cursor: pointer;
 }

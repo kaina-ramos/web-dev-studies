@@ -1,9 +1,5 @@
 const relogio = document.querySelector('#timer');
-const iniciar = document.querySelector('#start');
-const pausar = document.querySelector('#pause');
-const reiniciar = document.querySelector('#reset');
-
-let tempoRelogio = 0;
+let segundosRelogio = 0;
 let timer;
 
 function formataSegundos(segundos){
@@ -16,22 +12,29 @@ function formataSegundos(segundos){
 
 function iniciaRelogio(){
     timer = setInterval(function() {
-        tempoRelogio++;
-        relogio.innerHTML = formataSegundos(tempoRelogio);
+        segundosRelogio++;
+        relogio.innerHTML = formataSegundos(segundosRelogio);
     }, 1000)
 }
 
-iniciar.addEventListener('click', function(event) {
-    clearInterval(timer);
-    iniciaRelogio();
-});
+document.addEventListener('click', function(event) {
+    const elemento = event.target;
+    console.log(elemento);
+    if (elemento.classList.contains('start')) {
+        clearInterval(timer);  
+        relogio.classList.remove('paused');
+        iniciaRelogio();
+    }
 
-pausar.addEventListener('click', function(event) {
-    clearInterval(timer);
-});
+    if (elemento.classList.contains('pause')) {
+        relogio.classList.add('paused');
+        clearInterval(timer);
+    }
 
-reiniciar.addEventListener('click', function(event) {
-    clearInterval(timer);
-    relogio.innerHTML = "00:00:00";
-    tempoRelogio = 0;
-});
+    if (elemento.classList.contains('reset')) {
+        clearInterval(timer);
+        relogio.classList.remove('paused');
+        relogio.innerHTML = "00:00:00";
+        segundosRelogio = 0;
+    }
+})
