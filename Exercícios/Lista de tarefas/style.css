@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 body {
-    background-color: black;
+    background-color: rgb(62, 0, 20);
     color: white;
     font-family: "Libre Baskerville";
 }
@@ -33,9 +33,10 @@ input.insercao-tarefa {
     width: 279px;
     height: fit-content;
     padding: 5px 15px;
-    border: solid 2px rgba(255, 255, 255, 0.544);
+    border: solid 2px rgb(135, 135, 135);
     border-radius: 10px;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.163), transparent);
+    background-image: linear-gradient(to top, 
+    rgb(0, 0, 0), rgb(45, 45, 45));
 }
 
 /* 'Suas tarefas aparecem aqui' */
@@ -83,7 +84,3 @@ button:hover {
 .section-title {
     text-align: center;
 }
-
-/* .container-lista {
-    word-wrap: break-word;
-} */

@@ -12,7 +12,6 @@ formTarefa.addEventListener('submit', function(event){
     if(inputTarefa.value === ''){
         alert('Insira uma tarefa.');
     } else {
-        // Implementar: Remover placeholder ao inserir tarefa válida
         const itemLista = document.createElement('li');
         const pListItem = document.createElement('span');
         const botaoApagar = document.createElement('button')
@@ -29,4 +28,11 @@ formTarefa.addEventListener('submit', function(event){
         formTarefa.reset();
         document.querySelector('.placeholder').innerHTML = '';
     }  
+})
+
+document.addEventListener('click', function(event){
+    const elementoClickado = event.target;
+    if (elementoClickado.classList.contains('botao-concluir')){
+        elementoClickado.parentElement.remove();
+    }
 })
