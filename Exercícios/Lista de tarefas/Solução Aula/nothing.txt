@@ -36,7 +36,7 @@ input.insercao-tarefa {
     border: solid 2px rgb(135, 135, 135);
     border-radius: 10px;
     background-image: linear-gradient(to top, 
-    rgb(0, 0, 0), rgb(45, 45, 45));
+    rgb(0, 0, 0), rgb(45, 45, 45));  
 }
 
 /* 'Suas tarefas aparecem aqui' */

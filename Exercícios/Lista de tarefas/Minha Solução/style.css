@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    background-color: rgb(124, 124, 124);
+    color: white;
+    font-family: "Libre Baskerville";
+}
+
+ /* botão adicionar */
+button.adiciona-tarefa {
+    height: 2.2em;
+    color: white;
+    font-family: "Libre Baskerville";
+    border: outset white 2px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+/* campo de escrita */
+input.insercao-tarefa {
+    background-color: black;
+    font-family: "Libre Baskerville";
+    color: white;
+    border: inset black 2px;
+    border-radius: 5px;
+    height: 2em;
+    padding-left: 5px;
+}
+
+/* bloco principal */
+#main-section {
+    margin: 15em auto;
+    width: 279px;
+    height: fit-content;
+    padding: 5px 15px;
+    border: solid 2px rgb(135, 135, 135);
+    border-radius: 10px;
+    background-image: linear-gradient(to top, 
+    rgb(0, 0, 0), rgb(45, 45, 45));  
+}
+
+/* 'Suas tarefas aparecem aqui' */
+.placeholder {
+    color: grey;
+}
+
+/* Lista das tarefas */
+#lista-tarefas > li {
+    margin-bottom: 10px;
+}
+
+/* Texto dos itens da lista */
+.tarefa {
+    margin-right: 10px;
+}
+
+/* botão para concluir a tarefa */
+button.botao-concluir {
+    color: white;
+    font-family: "Libre Baskerville";
+    border: outset white 2px;
+    border-radius: 5px;
+    background-color: black;
+    scale: 0.9;
+}
+
+button:hover {
+    cursor: pointer;
+    color: yellow;
+}
+
+/* Input e botão de adicionar tarefas */
+.form-tarefa {
+    display: flex;
+    gap: 10px;
+}
+
+/* texto placeholder no input */
+::placeholder {
+    color: rgba(255, 247, 160, 0.568);
+}
+
+/* 'Lista de Tarefas' */
+.section-title {
+    text-align: center;
+}
