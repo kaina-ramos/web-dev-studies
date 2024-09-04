@@ -1,0 +1,74 @@
+body {
+    background-color: #545454;
+    background-image: url(constructor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    border: solid 1px black;
+    border-radius: 0.4em;
+    background-color: #262626;
+    width: 288px;
+    padding: 0.3em;
+}
+
+.display {
+    width: 20em;
+    height: 3em;
+    max-width: 7.8em;
+    max-height: 1.5em;
+    font-size: 200%;
+    margin: 0.4em 0;
+    padding: 0.5em;
+    border: solid 1px #3d3d3d;
+    border-radius: 10px;
+    color: white;
+    letter-spacing: 2px;
+    outline: none;
+    background-color: #262626;
+    caret-color: transparent;
+}
+
+.btn {
+    width: 3em;
+    scale: 1.6;
+    border: none;
+    border-radius: 5px;
+    padding: 0.3em;
+    color: white;
+    margin: 0.7em 1em;
+}
+
+
+.numeric {
+    background-color: #555555;
+}
+
+.symbol, .equals {
+    background-color: #8c8c8c;
+}
+
+.erase {
+    background-color: #3d96d5;
+}
+
+.clear {
+    background-color: rgb(255, 166, 0);
+    
+    font-weight: bold;
+}
+
+/* Eventos */
+.btn:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+.erase:hover {
+    background-color: rgb(77, 176, 247);
+}
+
+.clear:hover {
+    background-color: rgb(255, 174, 22);
+}
