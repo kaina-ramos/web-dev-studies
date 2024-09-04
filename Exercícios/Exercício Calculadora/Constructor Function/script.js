@@ -57,6 +57,7 @@ function Calculadora() {
 
     this.enterInput = elmnt => {
         if (elmnt.keyCode === 13) {
+            elmnt.preventDefault();
             this.doOperation();
         }
     };
