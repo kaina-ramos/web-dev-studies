@@ -13,7 +13,7 @@ function Calculadora() {
         document.addEventListener('click', event => {
             const el = event.target;
             if (el.classList.contains('numeric')) this.addDisplay(el);
-            if (el.classList.contains('symbol')) this.addDisplay(el);
+            if (el.classList.contains('symbol')) this.addDisplay(el); // Poderia fazer junto da verificação acima, mas por estética preferi deixar duas linhas separadas
             if (el.classList.contains('clear')) this.clearDisplay();
             if (el.classList.contains('erase')) this.eraseDisplay();
             if (el.classList.contains('equals')) this.doOperation();
