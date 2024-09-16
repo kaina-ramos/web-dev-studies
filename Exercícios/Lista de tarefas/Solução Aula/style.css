@@ -1,0 +1,72 @@
+body {
+    background-color: lightblue;
+    background-attachment: fixed;
+    color: rgb(0, 43, 2);
+    font-family: cursive;
+}
+
+button.btn-tarefa, input {
+    font-family: cursive;
+    border-radius: 15px;
+    border-style: dotted;
+    border-width: 4px;
+    border-color: #005018;
+    padding: 0.3rem;
+    background-color: transparent;
+    color: #005319;
+    font-weight: bold;
+}
+
+li {
+    margin: 10px 1px;
+}
+
+.apagar {
+    font-family: cursive;
+    border-radius: 15px;
+    border-style: dotted;
+    border-width: 4px;
+    border-color: #001807;
+    background-color: transparent;
+    color: #001807;
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: #00491691;
+}
+
+.container {
+    background-color: #e5e5f7;
+    background-size: 20px 20px;
+    background-image:  repeating-linear-gradient(0deg, #006627, #006627 1px, #ffffff 1px, #ffffff);
+    padding: 1rem;
+    margin: 10rem auto;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 20px;
+    border-style: double;
+    border-color: #08660054;
+    border-width: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: #004e2a;
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+    margin-top: auto;
+    border-radius: 20px;
+}
+
+ul {
+    text-align: start;
+}
+
+.apagar {
+    margin-left: 1rem;
+}
